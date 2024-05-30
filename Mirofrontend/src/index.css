@@ -30,6 +30,15 @@ code {
   color: #1E293B;
 }
 
+.HomePageLinks .span{
+  border: 1px solid black;
+  padding: 1.5%;
+  background-color: #8B5CF6;
+  color: whitesmoke;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
 .HomePageLinks .span:hover{
   padding: 1.5%;
   border-radius: 100px;
@@ -38,7 +47,28 @@ code {
   color: #FFFFFF;
   font-weight: 500;
   cursor: pointer;
+  font-weight: bold;
 }
+
+.Healee-Patient-Journey-Designer{
+  font-size: x-large;
+  font-weight: bold;
+}
+
+.AnchorTagMiroBoard{
+  font-size: x-large;
+  /* color: black; */
+  text-decoration: none;
+  margin-top: 2%;
+}
+
+.MiroBoardLink-ButtonGetStarted{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 
 .Payment-Container-Div{
   display: flex;
@@ -551,6 +581,7 @@ code {
 }
 
 .NextButtonPages{
+  margin-top: 2%;
   padding: 1%;
   width: 18%;
   border-radius: 10px;
@@ -573,12 +604,12 @@ code {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 1.5%;
+  /* margin-top: 1.5%; */
 }
 
 .PaymentNextButton{
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 1.5%;
+  /* margin-top: 0.5%; */
 }

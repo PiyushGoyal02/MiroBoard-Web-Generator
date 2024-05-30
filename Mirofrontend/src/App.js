@@ -11,18 +11,14 @@ import sign from '../src/Assets/Sign.png'
 import text from '../src/Assets/Text.png'
 import black from '../src/Assets/BlackMan.jpg'
 import { FaRegHeart } from "react-icons/fa";
+import { useLocation } from 'react-router-dom';
 
 function App() {
   
-  const defineRouteName = ["Payment", "MedicalRecords", "Register", "BookAppointment"];
   const [contentArray, setContentArray] = useState([])
   const navigator = useNavigate();
-  const [arrayRoute, setArrayRoute] = useState(defineRouteName);
+  const location = useLocation();
   const [zeroIndex, setZeroIndex] = useState(0);
-  
-
-
-  console.log(contentArray, "contentArray")
 
   const extractValue = (htmlContent) => {
     const createElement = document.createElement('div');
@@ -51,12 +47,38 @@ function App() {
     BookAppointment: BookAppointment
   };
 
-  function NextClickHandler() {
-    if (zeroIndex <= arrayRoute.length - 1) {
-      setZeroIndex(zeroIndex + 1);
-      navigator(`/${arrayRoute[zeroIndex].toLowerCase().replace(" ", "")}`, { state: { arrayRoute, zeroIndex: zeroIndex + 1 } });
+  useEffect(() => {
+    // Extracting path and normalizing it
+    const path = location.pathname.slice(1);
+    console.log(path,"Path")
+    const normalizedPath = path.toLowerCase().replace(/\s+/g, ""); // Replacing all spaces
+    console.log(normalizedPath,"normalizedPath")
+    const currentIndex = contentArray.findIndex(content =>
+      content.toLowerCase().replace(/\s+/g, "") === normalizedPath
+    );
+    console.log(currentIndex,"currentIndex")
+
+    if (currentIndex !== -2) {         // Update state if a valid index is found
+      setZeroIndex(currentIndex);
     }
-  }
+  }, [location.pathname, contentArray]);
+
+  // Handler to navigate to the next content
+  const NextClickHandler = () => {
+    const newIndex = zeroIndex + 1;
+    if (newIndex <= contentArray.length) {
+      setZeroIndex(newIndex);
+      const newPath = contentArray[newIndex];
+      navigator(`/${newPath}`);
+    }
+  };
+
+  // function NextClickHandler() {
+  //   if (zeroIndex <= contentArray.length - 1) {
+  //     setZeroIndex(zeroIndex + 1);
+  //     navigator(`/${contentArray[zeroIndex].toLowerCase().replace(" ", "")}`, { state: { contentArray, zeroIndex: zeroIndex + 1 } });
+  //   }
+  // }
 
   return (
     <div>
@@ -69,7 +91,7 @@ function App() {
 
         <div className="HomePageLinks">
           <Link className='span' to='/'>Home</Link>
-            {arrayRoute.map(route => (
+            {contentArray.map(route => (
               <Link className='span' key={route} to={`/${route.replace(" ", "")}`}>{route}</Link>
             ))}
         </div>
@@ -91,7 +113,7 @@ function App() {
 
     <Routes>
       <Route path='/' element={<Homepage NextClickHandler={NextClickHandler} />} />
-      {arrayRoute.map(route => {
+      {contentArray.map(route => {
         const Component = RouteComponents[route];
         return (
           <Route
