@@ -44,7 +44,7 @@ function BookAppointment({NextClickHandler}){
                             </div>
 
                             <div className='AppoitmentButton-DetailsButton'>
-                                <button className='Doo-Buttons'>Booking</button>
+                                <button onClick={NextClickHandler} className='Doo-Buttons'>Book</button>
                                 <button className='Doo-Buttons'>Details</button>
                             </div>
                             
@@ -76,7 +76,7 @@ function BookAppointment({NextClickHandler}){
                             </div>
 
                             <div className='AppoitmentButton-DetailsButton'>
-                                <button className='Doo-Buttons'>Booking</button>
+                                <button onClick={NextClickHandler} className='Doo-Buttons'>Book</button>
                                 <button className='Doo-Buttons'>Details</button>
                             </div>
                             
@@ -114,7 +114,7 @@ function BookAppointment({NextClickHandler}){
                             </div>
 
                             <div className='AppoitmentButton-DetailsButton'>
-                                <button className='Doo-Buttons'>Booking</button>
+                                <button onClick={NextClickHandler} className='Doo-Buttons'>Book</button>
                                 <button className='Doo-Buttons'>Details</button>
                             </div>
                             
@@ -146,7 +146,7 @@ function BookAppointment({NextClickHandler}){
                             </div>
 
                             <div className='AppoitmentButton-DetailsButton'>
-                                <button className='Doo-Buttons'>Booking</button>
+                                <button onClick={NextClickHandler} className='Doo-Buttons'>Book</button>
                                 <button className='Doo-Buttons'>Details</button>
                             </div>
                             
@@ -183,7 +183,7 @@ function BookAppointment({NextClickHandler}){
                             </div>
 
                             <div className='AppoitmentButton-DetailsButton'>
-                                <button className='Doo-Buttons'>Booking</button>
+                                <button onClick={NextClickHandler} className='Doo-Buttons'>Book</button>
                                 <button className='Doo-Buttons'>Details</button>
                             </div>
                             
@@ -215,7 +215,7 @@ function BookAppointment({NextClickHandler}){
                             </div>
 
                             <div className='AppoitmentButton-DetailsButton'>
-                                <button className='Doo-Buttons'>Booking</button>
+                                <button onClick={NextClickHandler} className='Doo-Buttons'>Book</button>
                                 <button className='Doo-Buttons'>Details</button>
                             </div>
                             
@@ -225,9 +225,9 @@ function BookAppointment({NextClickHandler}){
                     
                 </div>
             </div>        
-            <div className='BookAppointment-NextButton'>
+            {/* <div className='BookAppointment-NextButton'>
                 <button className='NextButtonPages' onClick={NextClickHandler}>Next</button>
-            </div>
+            </div> */}
         </div>            
     )
 }

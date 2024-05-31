@@ -99,12 +99,28 @@ function Payment({NextClickHandler}){
 
                     <div>
                         {formData === 'Cash' ? (
-                            <input className='inputTagss' type='number' placeholder='How Many Cash.' />
+                            <div className='CashRadioButton'>
+                                {/* <p>How Many Cash -</p> */}
+                                <input className='inputTagss' type='number' placeholder='Enter Amount'/>
+                            </div>
                         ) : formData === 'Card' ? (
-                            <div>
-                                <input className='inputTagss' type='text' placeholder='Enter Card Number.' />
-                                <input type='text' className='inputTagss' placeholder='Card Expires'></input>
-                                <input type='text' className='inputTagss' placeholder='Authorized Signature Number'></input>
+                            <div className='AllPaymentRadioButtonsDetails'>
+                                <div className='PaymentRadioButtonDetails'>
+                                    <p>Card Number -</p>
+                                    <input className='inputTagss' type='text' placeholder='Enter Card Number.' />
+                                </div>
+
+                                <div className='ExpireDate-CVVNumber-Div'>
+                                    <div className='PaymentRadioButtonDetails'>
+                                        <p>Expiry Date -</p>
+                                        <input className='ExpireDateInput' type='text' placeholder='Month/Year' />
+                                    </div>
+
+                                    <div className='PaymentRadioButtonDetails'>
+                                        <p>CVV Number -</p>
+                                        <input className='ExpireDateInput' type='password' placeholder='Enter CVV Number.' />
+                                    </div>
+                                </div>
                             </div>
                         ) : formData === 'Insurance' ? (
                             <div>
@@ -120,14 +136,20 @@ function Payment({NextClickHandler}){
 
 
                     <div className="Submit-Button-MainDiv">
-                        <button className="Submit-Button">Submit</button>
+                        <button onClick={NextClickHandler} className="Submit-Button">Submit</button>
                     </div>
 
                 </div>
             </div>
-            <div className='PaymentNextButton'><button className='NextButtonPages' onClick={NextClickHandler}>Next Page</button></div>
+            {/* <div className='PaymentNextButton'><button className='NextButtonPages' onClick={NextClickHandler}>Next Page</button></div> */}
         </div>
     )
 }
 
 export default Payment;
+
+
+
+{/* <input className='inputTagss' type='text' placeholder='Enter Card Number.' /> */}
+                                // <input type='text' className='inputTagss' placeholder='Card Expires'></input>
+                                // <input type='text' className='inputTagss' placeholder='Authorized Signature Number'></input>

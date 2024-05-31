@@ -61,8 +61,9 @@ function App() {
     if (currentIndex !== -2) {         // Update state if a valid index is found
       setZeroIndex(currentIndex);
     }
-  }, [location.pathname, contentArray]);
 
+  }, [location.pathname, contentArray]);
+  
   // Handler to navigate to the next content
   const NextClickHandler = () => {
     const newIndex = zeroIndex + 1;
@@ -72,6 +73,14 @@ function App() {
       navigator(`/${newPath}`);
     }
   };
+
+  if(zeroIndex > contentArray.length){
+    return (
+      <div>
+        <p>Thank You</p>
+      </div>
+    )
+  }
 
   // function NextClickHandler() {
   //   if (zeroIndex <= contentArray.length - 1) {

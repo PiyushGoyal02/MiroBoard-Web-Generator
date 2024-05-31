@@ -129,7 +129,7 @@ const MedicalRecords = ({NextClickHandler}) => {
           </>
         )}
       </div>
-      <button className='NextButtonPages' onClick={NextClickHandler}>Next</button>
+      <button className='NextButtonPages' onClick={NextClickHandler}>Done</button>
     </div>
   );
 };

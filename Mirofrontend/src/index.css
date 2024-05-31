@@ -57,9 +57,7 @@ code {
 
 .AnchorTagMiroBoard{
   font-size: x-large;
-  /* color: black; */
   text-decoration: none;
-  margin-top: 2%;
 }
 
 .MiroBoardLink-ButtonGetStarted{
@@ -202,6 +200,69 @@ code {
 
 .PaymentMethodRadioButtons label{
   font-size: larger;
+}
+
+.CashRadioButton{
+  display: flex;
+  margin-top: 2%;
+  /* justify-content: center; */
+  /* align-items: center; */
+  flex-direction: column;
+  gap: 5px;
+}
+
+.CashRadioButton p {
+  font-size: 18px;
+}
+
+.PaymentRadioButtonDetails{
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center;
+  align-items: center; */
+  gap: 5px;
+}
+
+.PaymentRadioButtonDetails p{
+  font-size: 18px;
+}
+
+.AllPaymentRadioButtonsDetails{
+  margin-top: 1%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.MiroBoardLink-Hading{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 1%;
+}
+
+.MiroBoardLink-Hading span {
+  font-size: 20px;
+}
+
+.ExpireDate-CVVNumber-Div{
+  display: flex;
+  gap: 20px;
+  margin-top: 1%;
+}
+
+.ExpireDateInput{
+  border-radius: 5px;
+  margin-top: 1%;
+  /* height: 35px; */
+  /* width: 95%; */
+  padding: 0.6%;
+  border-color: #8B5CF6;
+  background-color: #ECE6F0;
+  border-style: none;
+  padding: 3%;
 }
 
 
@@ -465,6 +526,7 @@ code {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 .file-btn {

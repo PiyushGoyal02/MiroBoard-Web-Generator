@@ -68,7 +68,7 @@ function Register({NextClickHandler}){
                         </div>
 
                         <div className='buttonSignup'>
-                            <button className='SignUp-Button' onClick={NextClickHandler}>Next</button>
+                            <button className='SignUp-Button' onClick={NextClickHandler}>Register</button>
                         </div>
 
                         {/* <div className='Line-OR-TopDiv'>
