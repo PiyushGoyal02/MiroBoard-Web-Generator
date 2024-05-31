@@ -58,13 +58,12 @@ function Register({NextClickHandler}){
                                     <option value="audi">Select your Gender</option>
                                     <option value="volvo">Men</option>
                                     <option value="saab">Female</option>
-                                    <option value="mercedes">Kid</option>
                                 </select>
                             </div>
                         </div>
 
                         <div>
-                            <input className='description' type='text' placeholder='Description'></input>
+                            <input className='InputDescriptionRegister' type='text' placeholder='Description'></input>
                         </div>
 
                         <div className='buttonSignup'>

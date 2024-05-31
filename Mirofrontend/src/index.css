@@ -395,19 +395,21 @@ code {
   margin-top: 4%;
 }
 
-.description{
+.InputDescriptionRegister{
   border-radius: 5px;
   margin-top: 2%;
   height: 120px;
   width: 100%;
-  padding: 0.6%;
   border-color: #8B5CF6;
   background-color: #ECE6F0;
   border-style: none;
-  padding: 3%;
+  padding-bottom: 12%;
+  padding-left: 1%;
+  display: flex;
+  text-align: start;
 }
 
-.description::placeholder{
+.InputDescriptionRegister::placeholder{
   color: #49454F;
   font-size: 15px;
 }
