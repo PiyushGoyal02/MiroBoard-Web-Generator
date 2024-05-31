@@ -12,6 +12,7 @@ import text from '../src/Assets/Text.png'
 import black from '../src/Assets/BlackMan.jpg'
 import { FaRegHeart } from "react-icons/fa";
 import { useLocation } from 'react-router-dom';
+import Thankyou from './Components/ThankYou';
 
 function App() {
   
@@ -50,13 +51,10 @@ function App() {
   useEffect(() => {
     // Extracting path and normalizing it
     const path = location.pathname.slice(1);
-    console.log(path,"Path")
     const normalizedPath = path.toLowerCase().replace(/\s+/g, ""); // Replacing all spaces
-    console.log(normalizedPath,"normalizedPath")
     const currentIndex = contentArray.findIndex(content =>
       content.toLowerCase().replace(/\s+/g, "") === normalizedPath
     );
-    console.log(currentIndex,"currentIndex")
 
     if (currentIndex !== -2) {         // Update state if a valid index is found
       setZeroIndex(currentIndex);
@@ -67,20 +65,14 @@ function App() {
   // Handler to navigate to the next content
   const NextClickHandler = () => {
     const newIndex = zeroIndex + 1;
-    if (newIndex <= contentArray.length) {
+    if (newIndex < contentArray.length) {
       setZeroIndex(newIndex);
       const newPath = contentArray[newIndex];
       navigator(`/${newPath}`);
+    }else{
+      navigator('/thankyou')
     }
   };
-
-  if(zeroIndex > contentArray.length){
-    return (
-      <div>
-        <p>Thank You</p>
-      </div>
-    )
-  }
 
   // function NextClickHandler() {
   //   if (zeroIndex <= contentArray.length - 1) {
@@ -132,6 +124,8 @@ function App() {
           />
         );
       })}
+
+      <Route path='/thankyou' element={<Thankyou/>}></Route>
     </Routes>
 
     </div>
