@@ -37,7 +37,7 @@ function Register({NextClickHandler}){
 
                             <div className="LastName-Div">
                                 <label className="labelsTagss" htmlFor="dateOfBirth"> Date Of Birth </label>
-                                <input required type="date" className="inputTagss" id="dateOfBirth" placeholder="Enter Your DOB"></input>
+                                <input required type="date" className="inputTagss DateOfBirthInputTag" id="dateOfBirth" placeholder="Enter Your DOB"></input>
                             </div>
                         </div>
 

@@ -55,6 +55,25 @@ code {
   font-weight: bold;
 }
 
+.MenuBarIcon{
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 100%;
+  height: 50px;
+  width: 3%;
+  margin-right: 5%;
+  /* width: 10%; */
+}
+
+.MenuBarIcon p{
+  font-size: xx-large;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .AnchorTagMiroBoard{
   font-size: x-large;
   text-decoration: none;
@@ -676,4 +695,205 @@ code {
   justify-content: center;
   align-items: center;
   /* margin-top: 0.5%; */
+}
+
+
+@media only screen and (max-width: 480px) {
+  .Healee-Patient-Journey-Designer{
+    font-size: 20px;
+  }
+
+  .AnchorTagMiroBoard{
+    font-size: 19px;
+    font-weight: bold;
+  }
+
+  .NextButtonPages{
+    width: 45%;
+    padding: 2%;
+    cursor: pointer;
+  }
+
+  .blackman{
+    display: none;
+  }
+
+  .redheart{
+    display: none;
+  }
+
+  .HomePageLinks{
+    display: none;
+  }
+
+  .SignUp-Box-Div{
+    margin-top: 5%;
+    width:95%;
+    height: 480px ;
+  }
+
+  .Content-Div{
+    display: flex;
+    justify-content: space-around;
+    gap: 5px;
+  }
+  
+  .inputTagss{
+    width: 45vw;
+    padding: 0.6%;
+    padding: 4%;
+  }
+
+  .InputDescriptionRegister{
+    padding-bottom: 22%;
+  }
+  
+  .BookAppointment-Div{
+    width: 95%;
+  }
+
+  .DoctorImage{
+    /* width: 15%; */
+  }
+
+  .DrDetails{
+
+  }
+
+  .Specialist-StatusButton h5{
+    font-size: 11px;
+  }
+
+  .TimeAndDate{
+    margin-top: 1%;
+    font-size: 12px;
+  }
+
+  .Single-Content-Doctor{
+    height: 140px;
+  }
+
+  .InsuranceInputTag{
+    margin-top: 2%;
+    width: 95%;
+    gap: 5px;
+  }
+
+  .Doo-Buttons{
+    padding: 2%;
+    width: 95%;
+  }
+
+  .AppoitmentButton-DetailsButton{
+    margin-top: 2%;
+  }
+
+
+  .Payment-GateWay-TopDiv{
+    margin-top: 5%;
+    width: 95%;
+  }
+
+  
+}
+
+
+
+
+
+
+
+/* Css Cross And MenuCard Button */
+.demo {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+  margin-right: 4%;
+	background-image: linear-gradient(
+		to top
+	);
+	.menu-icon {
+		transform: scale(1.5);
+	}
+}
+
+:root {
+	--bar-bg: #212529;
+}
+
+.menu-icon {
+	position: relative;
+	width: 50px;
+	height: 50px;
+	cursor: pointer;
+
+	.menu-icon__cheeckbox {
+		display: block;
+		width: 100%;
+		height: 100%;
+		position: relative;
+		cursor: pointer;
+		z-index: 2;
+		-webkit-touch-callout: none;
+		position: absolute;
+		opacity: 0;
+	}
+	div {
+		margin: auto;
+		position: absolute;
+		top: 0;
+		right: 0;
+		left: 0;
+		bottom: 0;
+		width: 22px;
+		height: 12px;
+	}
+	span {
+		position: absolute;
+		display: block;
+		width: 100%;
+		height: 2px;
+		background-color: var(--bar-bg, #000);
+		border-radius: 1px;
+		transition: all 0.2s cubic-bezier(0.1, 0.82, 0.76, 0.965);
+
+		&:first-of-type {
+			top: 0;
+		}
+		&:last-of-type {
+			bottom: 0;
+		}
+	}
+	&.active,
+	.menu-icon__cheeckbox:checked + div {
+		span {
+			&:first-of-type {
+				transform: rotate(45deg);
+				top: 5px;
+			}
+			&:last-of-type {
+				transform: rotate(-45deg);
+				bottom: 5px;
+			}
+		}
+	}
+
+	&.active:hover span:first-of-type,
+	&.active:hover span:last-of-type,
+	&:hover .menu-icon__cheeckbox:checked + div span:first-of-type,
+	&:hover .menu-icon__cheeckbox:checked + div span:last-of-type {
+		width: 22px;
+	}
+
+	&:hover {
+		@media (min-width: 1024px) {
+			span:first-of-type {
+				width: 26px;
+			}
+
+			span:last-of-type {
+				width: 12px;
+			}
+		}
+	}
 }

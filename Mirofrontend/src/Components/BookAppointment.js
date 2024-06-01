@@ -36,8 +36,8 @@ function BookAppointment({NextClickHandler}){
                                         </div>
 
                                         <div>
-                                            <p>10:00 to 2:00-AM</p>
-                                            <p>5:00 to 8:00-PM</p>
+                                            <p className='TimeAndDate'>10:00 to 2:00-AM</p>
+                                            <p className='TimeAndDate'>5:00 to 8:00-PM</p>
                                         </div>
                                     </div>
                                 </div>
@@ -68,8 +68,8 @@ function BookAppointment({NextClickHandler}){
                                         </div>
 
                                         <div>
-                                            <p>10:00 to 2:00-AM</p>
-                                            <p>5:00 to 8:00-PM</p>
+                                        <p className='TimeAndDate'>10:00 to 2:00-AM</p>
+                                            <p className='TimeAndDate'>5:00 to 8:00-PM</p>
                                         </div>
                                     </div>
                                 </div>
@@ -106,8 +106,8 @@ function BookAppointment({NextClickHandler}){
                                         </div>
 
                                         <div>
-                                            <p>10:00 to 2:00-AM</p>
-                                            <p>5:00 to 8:00-PM</p>
+                                        <p className='TimeAndDate'>10:00 to 2:00-AM</p>
+                                            <p className='TimeAndDate'>5:00 to 8:00-PM</p>
                                         </div>
                                     </div>
                                 </div>
@@ -138,8 +138,8 @@ function BookAppointment({NextClickHandler}){
                                         </div>
 
                                         <div>
-                                            <p>10:00 to 2:00-AM</p>
-                                            <p>5:00 to 8:00-PM</p>
+                                        <p className='TimeAndDate'>10:00 to 2:00-AM</p>
+                                            <p className='TimeAndDate'>5:00 to 8:00-PM</p>
                                         </div>
                                     </div>
                                 </div>
@@ -175,8 +175,8 @@ function BookAppointment({NextClickHandler}){
                                         </div>
 
                                         <div>
-                                            <p>10:00 to 2:00-AM</p>
-                                            <p>5:00 to 8:00-PM</p>
+                                            <p className='TimeAndDate'>10:00 to 2:00-AM</p>
+                                            <p className='TimeAndDate'>5:00 to 8:00-PM</p>
                                         </div>
                                     </div>
                                 </div>
@@ -207,8 +207,8 @@ function BookAppointment({NextClickHandler}){
                                         </div>
 
                                         <div>
-                                            <p>10:00 to 2:00-AM</p>
-                                            <p>5:00 to 8:00-PM</p>
+                                            <p className='TimeAndDate'>10:00 to 2:00-AM</p>
+                                            <p className='TimeAndDate'>5:00 to 8:00-PM</p>
                                         </div>
                                     </div>
                                 </div>
@@ -233,4 +233,3 @@ function BookAppointment({NextClickHandler}){
 }
 
 export default BookAppointment;
-// {/* <p>Book Appointment</p>

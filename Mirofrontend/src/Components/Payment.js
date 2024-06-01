@@ -124,9 +124,9 @@ function Payment({NextClickHandler}){
                             </div>
                         ) : formData === 'Insurance' ? (
                             <div>
-                                <input type='text' className='inputTagss' placeholder='Personal Information'></input>
-                                <input className='inputTagss' type='text' placeholder='Enter Insurance Number.' />
-                                <input type='text' className='inputTagss' placeholder='Billing Statements'></input>
+                                <input type='text' className='inputTagss InsuranceInputTag' placeholder='Personal Information'></input>
+                                <input className='inputTagss InsuranceInputTag' type='text' placeholder='Enter Insurance Number.' />
+                                <input type='text' className='inputTagss InsuranceInputTag' placeholder='Billing Statements'></input>
                             </div>
                         ) : (
                             ''

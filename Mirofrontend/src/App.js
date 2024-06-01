@@ -13,9 +13,11 @@ import black from '../src/Assets/BlackMan.jpg'
 import { FaRegHeart } from "react-icons/fa";
 import { useLocation } from 'react-router-dom';
 import Thankyou from './Components/ThankYou';
+import { IoMenu } from "react-icons/io5";
+import { GiTireIronCross } from "react-icons/gi";
 
 function App() {
-  
+  const [iconPresent, SetIconPresent] = useState(false)
   const [contentArray, setContentArray] = useState([])
   const navigator = useNavigate();
   const location = useLocation();
@@ -106,6 +108,21 @@ function App() {
                 <img className="blackman" src={black}></img>
             </div>
           </div>
+
+          {/* <div className='MenuBarIcon'>
+            <p className='iconBar' onClick={() => SetIconPresent((pre) => !pre)}>{iconPresent ? (<IoMenu/> ): (<GiTireIronCross />)}</p>
+          </div> */}
+
+          <div class="demo">
+            <div class="menu-icon">
+              <input class="menu-icon__cheeckbox" type="checkbox" />
+              <div>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+          </div>
+
     </div>
 
     {/* <div className='NextButtonDiv'>
